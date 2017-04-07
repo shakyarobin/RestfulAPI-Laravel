@@ -11,11 +11,5 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::get('/{name?}', 'MyController@index'); // receive a parameter called name, if the name is not send then uses a default value 'name' from MyController
+// MyController@index => calling the function called index located at MyController.php 
