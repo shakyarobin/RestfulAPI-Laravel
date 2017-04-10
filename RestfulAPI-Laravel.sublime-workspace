@@ -35,6 +35,60 @@
 			}
 		},
 		{
+			"file": "app/Chapter3-ReadmeFirst.txt",
+			"settings":
+			{
+				"buffer_size": 1117,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".env.example",
+			"settings":
+			{
+				"buffer_size": 166,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/Vehicle.php",
+			"settings":
+			{
+				"buffer_size": 901,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/Maker.php",
+			"settings":
+			{
+				"buffer_size": 695,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "database/migrations/2017_04_08_114752_vehicles_table.php",
+			"settings":
+			{
+				"buffer_size": 878,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "database/migrations/2017_04_08_114708_makers_table.php",
+			"settings":
+			{
+				"buffer_size": 613,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/Http/routes.php",
 			"settings":
 			{
@@ -99,13 +153,18 @@
 	[
 		"/C/xampp/htdocs/MyOwnAPI",
 		"/C/xampp/htdocs/MyOwnAPI/app",
-		"/C/xampp/htdocs/MyOwnAPI/app/Http",
 		"/C/xampp/htdocs/MyOwnAPI/app/Http/Controllers",
-		"/C/xampp/htdocs/MyOwnAPI/resources",
+		"/C/xampp/htdocs/MyOwnAPI/database",
+		"/C/xampp/htdocs/MyOwnAPI/database/migrations",
 		"/C/xampp/htdocs/MyOwnAPI/resources/views"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/MyOwnAPI/app/ReadmeFirst.txt",
+		"/C/xampp/htdocs/MyOwnAPI/.env",
+		"/C/xampp/htdocs/MyOwnAPI/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/xampp/htdocs/MyOwnAPI/app/Vehicle.php",
+		"/C/xampp/htdocs/MyOwnAPI/Laravel-v5-Directory-structure-and-namespace-quick-look.txt",
 		"/C/xampp/htdocs/MyOwnAPI/app/Http/Controllers/MyController.php",
 		"/C/xampp/htdocs/MyOwnAPI/public/index.html"
 	],
@@ -142,7 +201,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
@@ -158,8 +217,8 @@
 						"selection":
 						[
 							[
-								153,
-								153
+								198,
+								198
 							]
 						],
 						"settings":
@@ -171,7 +230,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
@@ -187,8 +246,8 @@
 						"selection":
 						[
 							[
-								467,
-								467
+								328,
+								328
 							]
 						],
 						"settings":
@@ -200,7 +259,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
@@ -229,11 +288,185 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
 					"buffer": 3,
+					"file": "app/Chapter3-ReadmeFirst.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1117,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1117,
+								1117
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": ".env.example",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 166,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								166,
+								166
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/Vehicle.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 901,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								894,
+								894
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/Maker.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								695,
+								695
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "database/migrations/2017_04_08_114752_vehicles_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 878,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								721,
+								721
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "database/migrations/2017_04_08_114708_makers_table.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								459,
+								459
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "app/Http/routes.php",
 					"semi_transient": false,
 					"settings":
@@ -245,8 +478,8 @@
 						"selection":
 						[
 							[
-								638,
-								638
+								434,
+								434
 							]
 						],
 						"settings":
@@ -262,7 +495,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 10,
 					"file": "vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php",
 					"semi_transient": false,
 					"settings":
@@ -284,7 +517,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1335.0,
+						"translation.y": 75.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -374,7 +607,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 157.0,
+	"side_bar_width": 189.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
