@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Maker; //using the definiton Maker
 use App\Vehicle; //using the definiton Vehicle
+use App\Http\Requests\CreateVehicleRequest; // using the definition
 
 class MakerVehiclesController extends Controller {
 
@@ -32,9 +33,21 @@ class MakerVehiclesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateVehicleRequest $request, $makerId) // takes the parameter $request and $makerId
 	{
-		//
+		$maker = Maker::find($makerId); // check if the $makerId exist in given instance
+		if(!$maker) // if not return followin error message in json format with code 404
+		{
+			return response()->json(['message'=>'This maker does not exist', 'code' => 404], 404);// error message in json
+		}
+
+		$values = $request->all(); // fetch all the request values
+		$maker->vehicles()->create($values); // maker is obtaining the vehicles relations and call create method sending the $values. store all the values received from request and store within the relation of makersId.
+
+		return response()->json(['message' => 'the vehicle associated was created'], 201); // message success in json format
+
+
+		//Vehicle::create($values);	 we cannot do this 
 	}
 
 	/**

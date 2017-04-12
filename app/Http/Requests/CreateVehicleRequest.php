@@ -2,7 +2,7 @@
 
 use App\Http\Requests\Request;
 
-class CreateMakerRequest extends Request {
+class CreateVehicleRequest extends Request {
 
 	/**
 	 * Determine if the user is authorized to make this request.
@@ -11,7 +11,7 @@ class CreateMakerRequest extends Request {
 	 */
 	public function authorize()
 	{
-		return true;
+		return true; // need to be true else will have forbidden error
 	}
 
 	/**
@@ -19,16 +19,17 @@ class CreateMakerRequest extends Request {
 	 *
 	 * @return array
 	 */
-	public function rules() //rules of fillable
+	public function rules() // rules as required
 	{
 		return 
 		[
-		'name' => 'required', // name is required
-		'phone' => 'required' // phone isrequired
+		'color' => 'required',
+		'power' => 'required',
+		'capacity' => 'required',
+		'speed' => 'required',
 			//
 		];
 	}
-	//once we have the rules we have to redefine the response
 	public function response(array $errors) // response method, if the validation is failed we have to return http response, something went worng
 	{
 		return response()->json(['message'=>$errors, 'code' =>422], 422); // in json format
