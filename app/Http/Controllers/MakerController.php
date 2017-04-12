@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Maker; // using the Maker definition
+use App\Http\Requests\CreateMakerRequest; // using the CreateMakerRequest Definition
 
 class MakerController extends Controller {
 
@@ -27,9 +28,13 @@ class MakerController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(CreateMakerRequest $request) // stroe method takes the CreateMakerRequest value or Request
 	{
-		//
+		$values = $request->only(['name','phone']); // verify the values we receive is only name and phone in an array
+		
+		Maker::create($values); // creating an instance of Maker, create will receive the values
+		return response()->json(['message'=>'Maker Correctly added'], 200); //message in json to notify the data was inserted correctly
+
 	}
 
 	/**
