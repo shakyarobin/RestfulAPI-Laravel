@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-use App\Vehicle;
+use App\Vehicle; // using the definiton vehicle
 
 class VehicleController extends Controller {
 
@@ -14,10 +14,10 @@ class VehicleController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
+	public function index() // we only have the index method for vehicles and do not take any parameter. it will display all the values from inside vehicle table.
 	{
-		$vehicles = Vehicle::all();
-		return response()->json(['data' => $vehicles], 200);
+		$vehicles = Vehicle::all(); // fetching all the data. all()=>*.
+		return response()->json(['data' => $vehicles], 200); // returning the values from the database in json format with code 200
 		//
 	}
 
