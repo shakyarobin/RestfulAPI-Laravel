@@ -8,6 +8,7 @@ use App\Maker; //using the definiton Maker
 use App\Vehicle; //using the definiton Vehicle
 use App\Http\Requests\CreateVehicleRequest; // using the definition
 
+
 class MakerVehiclesController extends Controller {
 
 	/**
@@ -33,7 +34,7 @@ class MakerVehiclesController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(CreateVehicleRequest $request, $makerId) // takes the parameter $request and $makerId
+	public function store(CreateMakerRequest $request, $makerId) // takes the parameter $request and $makerId
 	{
 		$maker = Maker::find($makerId); // check if the $makerId exist in given instance
 		if(!$maker) // if not return followin error message in json format with code 404
@@ -81,8 +82,31 @@ class MakerVehiclesController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(CreateVehicleRequest $request, $makerId, $vehicleId)
 	{
+		$maker = Maker::find($makerId);
+		if(!$maker) // id didn't find the $maker return following
+		{
+			return response()->json(['message'=>'This maker does not exist', 'code' => 404], 404); // error message in json format with code 404 error
+		}
+		$vehicle = $maker->vehicles->find($vehicleId);
+		if(!$vehicle) // id didn't find the $vehicle return following
+		{
+			return response()->json(['message'=>'This vehicle does not exist', 'code' => 404], 404); // error message in json format with code 404 error
+		}
+		$color = $request->get('color');
+		$power = $request->get('power');
+		$capacity = $request->get('capacity');
+		$speed = $request->get('speed');
+
+		$vehicle->color = $color;
+		$vehicle->power = $power;
+		$vehicle->capacity = $capacity;
+		$vehicle->speed = $speed;
+
+		$vehicle->save();
+		return response()->json(['message' => 'The Vehicle has been updated'], 200); // if the data matches return the data in json format with code 200
+
 		//
 	}
 
