@@ -1,3 +1,0 @@
-please click copy and paste it in your browser to have a quick overview on how Directory Structure and namespace looks like in Laravel 5.0
-
-link :  https://mattstauffer.co/blog/laravel-5.0-directory-structure-and-namespace
